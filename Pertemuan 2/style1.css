@@ -18,3 +18,21 @@ body {
     box-sizing: border-box;
     display: flex;
 }
+
+.sidebar-satu {
+    width: 20%;
+    padding: 10px;
+    order: 1;
+}
+
+.kolom-utama {
+    width: 55%;
+    padding: 10px;
+    order: 2;
+}
+
+.sidebar-dua {
+    width: 20%;
+    padding: 10px;
+    order: 3;
+}
