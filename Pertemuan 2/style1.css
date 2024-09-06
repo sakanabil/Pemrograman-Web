@@ -8,12 +8,15 @@ body {
     background-color: #ddd;
     line-height: 1.65;
     padding-bottom: 1000px;
+    background: url('img/field1.jpg');
+    background-repeat: no-repeat;
+    background-size: 100%;
 }
 
 .container-satu {
     width: 800px;
     margin: 50px auto;
-    background-color: #fff;
+    background-color: grey;
     padding: 20px;
     box-sizing: border-box;
     display: flex;
@@ -23,16 +26,19 @@ body {
     width: 20%;
     padding: 10px;
     order: 1;
+    background-color: #f9fcfb;
 }
 
 .kolom-utama {
     width: 55%;
     padding: 10px;
     order: 2;
+    background-color: #f06553;
 }
 
 .sidebar-dua {
     width: 20%;
     padding: 10px;
     order: 3;
+    background-color: #f9fcfb;
 }
