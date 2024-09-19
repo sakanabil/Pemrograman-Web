@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Tugas Pertemuan 3</title>
+        <style>
+            body {
+                font-family: Arial, Helvetica, sans-serif;
+                margin: 0;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+            }
+
+            .form-group {
+                display: flex;
+                align-items: center;
+                margin-bottom: 15px;
+            }
+
+            .form-group label {
+                flex-basis: 120px;
+                margin-right: 10px;
+                color: red;
+            }
+
+            .form-group input[type="text"],
+            .form-group input[type="date"],
+            .form-group textarea {
+                width: 100%;
+                padding: 8px;
+                box-sizing: border-box;
+            }
+
+            textarea {
+                height: 80px;
+            }
+
+            .input-hobby,
+            .input-pekerjaan {
+                display: flex;
+                align-items: center;
+            }
+
+            .input-hobby label,
+            .input-pekerjaan label {
+                margin-right: 10px;
+                color: red;
+            }
+
+            .input-hobby input[type="checkbox"],
+            .input-pekerjaan input[type="checkbox"],
+            .input-jenisKelamin input[type="checkbox"] {
+                margin-right: 5px;
+            }
+
+            button {
+                padding: 10px;
+                border-radius: 5px;
+                border-width: 1px;
+                background-color: rgb(236, 236, 236);
+                color: rgb(0, 0, 0);
+                cursor: pointer;
+                width: 100%;
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <form id="myForm" onsubmit="return validasi()">
+            <div class="form-group">
+                <label for="nama">Nama</label>
+                <input type="text" id="nama" name="nama">
+            </div>
+            <div class="form-group">
+                <label for="alamat">Alamat</label>
+                <textarea name="alamat" id="alamat"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="tanggal-lahir">Tanggal Lahir</label>
+                <input type="date" id="tanggal-lahir" name="tanggal-lahir">
+            </div>
+            <div class="form-group">
+                <label>Jenis Kelamin</label>
+                <div class="input-jenisKelamin">
+                    <input type="checkbox" name="jenisKelamin" value="Laki-Laki" id="laki-laki">
+                    <label for="laki-laki">Laki-Laki</label>
+                    <input type="checkbox" name="jenisKelamin" value="Wanita" id="wanita">
+                    <label for="wanita">Wanita</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Hobby</label>
+                <div class="input-hobby">
+                    <input type="checkbox" name="Hobby" value="Berenang" id="berenang">
+                    <label for="berenang">Berenang</label>
+                    <input type="checkbox" name="Hobby" value="Berlari" id="berlari">
+                    <label for="berlari">Berlari</label>
+                    <input type="checkbox" name="Hobby" value="Lain-Lain" id="lain-lain">
+                    <label for="lain-lain">Lain-Lain</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Pekerjaan</label>
+                <div class="input-pekerjaan">
+                    <input type="checkbox" name="pekerjaan" value="Swasta" id="swasta">
+                    <label for="swasta">Swasta</label>
+                    <input type="checkbox" name="pekerjaan" value="PNS" id="pns">
+                    <label for="pns">PNS</label>
+                    <input type="checkbox" name="pekerjaan" value="Lain-Lain" id="pekerjaan-lain">
+                    <label for="pekerjaan-lain">Lain-Lain</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <input type="checkbox" name="kirim" value="kirim" id="kirim">
+                <label for="kirim">Check jika anda akan mengirimkan data ini</label>
+            </div>
+            <button type="submit">Cek!</button>
+        </form>
+
+        <script>
+            function validasi() {
+                var nama = document.getElementById('nama').value.trim();
+                var alamat = document.getElementById('alamat').value.trim();
+                var tanggalLahir = document.getElementById('tanggal-lahir').value;
+                var jenisKelamin = document.querySelectorAll('input[name="jenisKelamin"]:checked');
+                var hobby = document.querySelectorAll('input[name="Hobby"]:checked');
+                var pekerjaan = document.querySelectorAll('input[name="pekerjaan"]:checked');
+                var kirim = document.getElementById('kirim').checked;
+
+                if (!nama) {
+                    alert("Isi Nama dahulu");
+                    return false;
+                }
+
+                if (!alamat) {
+                    alert("Isi Alamat dahulu");
+                    return false;
+                }
+
+                if (!tanggalLahir) {
+                    alert("Isi Tanggal Lahir dahulu");
+                    return false;
+                }
+
+                if (jenisKelamin.length === 0) {
+                    alert("Pilih setidaknya satu jenis kelamin");
+                    return false;
+                }
+
+                if (hobby.length === 0) {
+                    alert("Pilih setidaknya satu hobby");
+                    return false;
+                }
+
+                if (pekerjaan.length === 0) {
+                    alert("Pilih setidaknya satu pekerjaan");
+                    return false;
+                }
+
+                if (!kirim) {
+                    alert("Check jika anda akan mengirimkan data ini");
+                    return false;
+                }
+
+                alert("Data dikirim");
+                return true;
+            }
+        </script>
+
+    </body>
+
+</html>
