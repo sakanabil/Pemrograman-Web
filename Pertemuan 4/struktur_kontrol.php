@@ -68,4 +68,15 @@ $nilai_siswa = array_slice($nilai_siswa, 2, -2);
 $total_nilai = array_sum($nilai_siswa);
 
 echo "Total nilai: " . $total_nilai;
+echo "<br>";
+
+$hargaBeli = 120000;
+$hargaSetelahDiskon = 0;
+
+if ($hargaBeli > 100000) {
+    $diskon = 0.2;
+    $hargaSetelahDiskon = $hargaBeli * (1 - $diskon);
+}
+
+echo "Harga setelah diskon: " . $hargaSetelahDiskon;
 ?>
