@@ -57,4 +57,15 @@ foreach ($nilaiSiswa as $nilai) {
     }
     echo "Nilai: $nilai (Lulus) <br>";
 }
+
+echo "<br>";
+
+$nilai_siswa = [85, 92, 78, 64, 90, 75, 88, 79, 70, 96];
+sort($nilai_siswa);
+
+$nilai_siswa = array_slice($nilai_siswa, 2, -2);
+
+$total_nilai = array_sum($nilai_siswa);
+
+echo "Total nilai: " . $total_nilai;
 ?>
