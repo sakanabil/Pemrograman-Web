@@ -23,6 +23,8 @@ $hasilPenugasanKurang = $a -= $b;
 $hasilPenugasanKali = $a *= $b;
 $hasilPenugasanBagi = $a /= $b;
 $hasilPenugasanSisaBagi = $a %= $b;
+$hasilIdentik = $a === $b;
+$hasilTidakIdentik = $a !== $b;
 
 echo "Hasil tambah: {$hasilTambah} <br>";
 echo "Hasil kurang: {$hasilKurang} <br>";
@@ -45,4 +47,6 @@ echo "Hasil penugasan kurang: {$hasilPenugasanKurang} <br>";
 echo "Hasil penugasan kali: {$hasilPenugasanKali} <br>";
 echo "Hasil penugasan bagi: {$hasilPenugasanBagi} <br>";
 echo "Hasil penugasan sisa bagi: {$hasilPenugasanSisaBagi} <br>";
+echo "Apakah $a identik dengan $b? : " . ($hasilIdentik ? 'Ya' : 'Tidak') . "<br>";
+echo "Apakah $a tidak identik dengan $b? : " . ($hasilTidakIdentik ? 'Ya' : 'Tidak') . "<br>";
 ?>
