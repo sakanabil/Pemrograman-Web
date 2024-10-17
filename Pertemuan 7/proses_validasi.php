@@ -28,6 +28,12 @@
                     echo $error . "<br>";
                 }
             }
+
+            if (empty($password)) {
+                $errors[] = "Password harus diisi.";
+            } else if (strlen($password) < 8) {
+                $errors[] = "Password minimal 8 karakter.";
+            }
         }
         ?>
     </body>
