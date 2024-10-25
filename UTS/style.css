@@ -1,0 +1,165 @@
+* {
+    margin: 0; /* Mengatur margin default semua elemen menjadi 0 */
+    padding: 0; /* Mengatur padding default semua elemen menjadi 0 */
+    box-sizing: border-box; /* Mengatur cara ukuran elemen dihitung */
+}
+
+body {
+    font-family: Arial, sans-serif; /* Mengatur font halaman menjadi Arial */
+    background-color: #f0f0f0; /* Mengatur warna latar belakang halaman */
+}
+
+.container {
+    max-width: 1200px; /* Maksimum lebar kontainer */
+    margin: 50px auto; /* Margin atas dan bawah 50px, otomatis di kiri dan kanan untuk pusatkan */
+    padding: 20px; /* Padding di dalam kontainer */
+    text-align: center; /* Mengatur teks di dalam kontainer menjadi tengah */
+}
+
+h1 {
+    margin-bottom: 30px; /* Margin bawah untuk heading */
+    font-size: 36px; /* Ukuran font untuk heading */
+    color: #333; /* Warna teks untuk heading */
+}
+
+#message {
+    margin-bottom: 20px; /* Margin bawah untuk elemen dengan ID message */
+    font-size: 18px; /* Ukuran font untuk message */
+}
+
+.candidates {
+    display: flex; /* Menampilkan kandidat dalam format fleksibel */
+    justify-content: space-around; /* Mengatur jarak antar kandidat merata */
+    gap: 20px; /* Jarak antara item dalam flex */
+}
+
+.candidate {
+    background-color: white; /* Warna latar belakang kandidat */
+    border: 1px solid #ccc; /* Batas kandidat */
+    border-radius: 10px; /* Sudut melengkung untuk kandidat */
+    padding: 20px; /* Padding di dalam kandidat */
+    width: 30%; /* Lebar kandidat */
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1); /* Bayangan untuk efek kedalaman */
+    transition: transform 0.2s; /* Transisi untuk efek hover */
+}
+
+.candidate img {
+    width: 100%; /* Mengatur lebar gambar menjadi 100% dari kontainer */
+    height: auto; /* Tinggi otomatis untuk menjaga proporsi gambar */
+    border-radius: 10px; /* Sudut melengkung untuk gambar */
+}
+
+.candidate h2 {
+    font-size: 24px; /* Ukuran font untuk nama kandidat */
+    margin: 15px 0; /* Margin atas dan bawah untuk nama kandidat */
+}
+
+.candidate p {
+    font-size: 16px; /* Ukuran font untuk deskripsi kandidat */
+    color: #555; /* Warna teks untuk deskripsi */
+}
+
+.candidate button {
+    margin-top: 15px; /* Margin atas untuk tombol voting */
+    padding: 10px 20px; /* Padding di dalam tombol */
+    background-color: #007bff; /* Warna latar belakang tombol */
+    color: white; /* Warna teks tombol */
+    border: none; /* Menghapus batas tombol */
+    border-radius: 5px; /* Sudut melengkung untuk tombol */
+    cursor: pointer; /* Mengubah kursor saat hover di tombol */
+}
+
+.candidate button:hover {
+    background-color: #0056b3; /* Mengubah warna latar belakang saat hover di tombol */
+}
+
+.candidate:hover {
+    transform: scale(1.05); /* Membesarkan kandidat saat hover */
+}
+
+.success {
+    color: green; /* Warna teks untuk pesan sukses */
+    font-weight: bold; /* Menebalkan teks sukses */
+}
+
+.error {
+    color: red; /* Warna teks untuk pesan error */
+    font-weight: bold; /* Menebalkan teks error */
+}
+
+/* CSS untuk halaman index.php */
+.login-container {
+    max-width: 400px; /* Maksimum lebar untuk kontainer login */
+    margin: 50px auto; /* Margin atas dan bawah 50px, otomatis di kiri dan kanan */
+    padding: 20px; /* Padding di dalam kontainer login */
+    background: white; /* Warna latar belakang kontainer login */
+    border-radius: 10px; /* Sudut melengkung untuk kontainer login */
+    box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Bayangan untuk efek kedalaman */
+}
+
+.form-group {
+    margin-bottom: 15px; /* Margin bawah untuk setiap grup form */
+}
+
+.form-group label {
+    display: block; /* Mengatur label sebagai block element */
+    margin-bottom: 5px; /* Margin bawah untuk label */
+}
+
+.form-group input, .form-group select {
+    width: 100%; /* Mengatur lebar input dan select menjadi 100% */
+    padding: 8px; /* Padding di dalam input dan select */
+    border: 1px solid #ddd; /* Batas untuk input dan select */
+    border-radius: 4px; /* Sudut melengkung untuk input dan select */
+}
+
+.error {
+    color: red; /* Warna teks untuk pesan error */
+    margin-bottom: 10px; /* Margin bawah untuk error */
+    text-align: center; /* Mengatur teks error menjadi tengah */
+}
+
+.login-container h2 {
+    text-align: center; /* Mengatur teks judul login menjadi tengah */
+    margin-bottom: 20px; /* Margin bawah untuk judul login */
+    color: #333; /* Warna teks untuk judul login */
+}
+
+.login-button {
+    background-color: #007bff; /* Warna latar belakang tombol login */
+    color: white; /* Warna teks tombol login */
+    padding: 10px 20px; /* Padding di dalam tombol login */
+    border: none; /* Menghapus batas tombol login */
+    border-radius: 5px; /* Sudut melengkung untuk tombol login */
+    cursor: pointer; /* Mengubah kursor saat hover di tombol login */
+    font-size: 16px; /* Ukuran font untuk tombol login */
+    transition: background-color 0.3s; /* Transisi untuk efek hover */
+    width: 100%; /* Lebar tombol login menjadi 100% */
+}
+
+.login-button:hover {
+    background-color: #0056b3; /* Mengubah warna latar belakang saat hover di tombol login */
+}
+
+
+/* CSS untuk hasil.php */
+.voter-details {
+    margin-top: 30px; /* Margin atas untuk detail pemilih */
+    text-align: left; /* Mengatur teks detail pemilih ke kiri */
+    padding: 20px; /* Padding di dalam detail pemilih */
+    background: white; /* Warna latar belakang untuk detail pemilih */
+    border-radius: 10px; /* Sudut melengkung untuk detail pemilih */
+    box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Bayangan untuk efek kedalaman */
+}
+
+.logout-button {
+    position: absolute; /* Mengatur posisi tombol logout */
+    top: 20px; /* Jarak dari atas 20px */
+    right: 20px; /* Jarak dari kanan 20px */
+    padding: 10px 20px; /* Padding di dalam tombol logout */
+    background-color: #dc3545; /* Warna latar belakang tombol logout */
+    color: white; /* Warna teks tombol logout */
+    border: none; /* Menghapus batas tombol logout */
+    border-radius: 5px; /* Sudut melengkung untuk tombol logout */
+    cursor: pointer; /* Mengubah kursor saat hover di tombol logout */
+}
